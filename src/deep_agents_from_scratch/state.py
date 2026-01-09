@@ -8,9 +8,9 @@ This module defines the extended agent state structure that supports:
 """
 
 from typing import Annotated, Literal, NotRequired
-from typing_extensions import TypedDict
 
 from langchain.agents import AgentState
+from typing_extensions import TypedDict
 
 
 class Todo(TypedDict):
@@ -23,6 +23,7 @@ class Todo(TypedDict):
 
     content: str
     status: Literal["pending", "in_progress", "completed"]
+
 
 def file_reducer(left, right):
     """Merge two file dictionaries, with right side taking precedence.
